@@ -60,16 +60,10 @@
 
               <nav id="navbar-collapse" class="nav__wrap collapse navbar-collapse">
                 <ul class="nav__menu nav__menu--inline">
-                  <li>
-                    <a href="features.html">Features</a>
-                  </li>
-                  <li>
-                    <a href="http://docs.arkhamjs.com">Documentation</a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/nitrogenlabs/arkhamjs">Github</a>
-                  </li>
-
+                  <li><a href="#features">Features</a></li>
+                  <li><a href="http://docs.arkhamjs.com">Documentation</a></li>
+                  <li><a href="./reduxComparison.html">Comparison</a></li>
+                  <li><a href="https://github.com/nitrogenlabs/arkhamjs">Github</a></li>
                 </ul>
                 <!-- end menu -->
               </nav>
@@ -87,6 +81,7 @@
       <div class="content-wrapper oh">
         <!-- Hero -->
         <section class="hero bg-img bg-gradient white-text" style="background-image: url(img/hero/hero_1.jpg);">
+          <canvas data-strokecolor="86,67,124" id="canvas"></canvas>
           <div class="container  hero__container">
             <div class="row hero__outer flex-vertical-align-center">
               <div class="col-md-5 text-right">
@@ -95,13 +90,14 @@
               <div class="col-md-7 text-left">
                 <h1 class="hero__title hero--boxed">A Flux Javascript Framework</h1>
                 <div class="hero__btn-holder mt-30">
-                  <a href="#" class="btn btn--lg btn--color rounded">
-                    <span>Get Started</span>
+                  <a href="/docs" class="btn btn--lg btn--color rounded">
+                    <i class="ui-book"></i>
+                    <span>Documentation</span>
                   </a>
-                  <div class="play-btn__wrap">
-                    <a href="https://www.youtube.com/watch?v=nVzVohG304A?autoplay=1" class="play-btn play-btn--sm play-btn--white single-video-lightbox"></a>
-                    <span class="play-btn__text">Take the Tutorial</span>
-                  </div>
+                  <a href="https://medium.com/@nitrog7/arkhamjs-react-framework-8f0ecd28cfbc" class="btn btn--lg btn--color rounded">
+                    <i class="ui-arrow-right"></i>
+                    <span>Getting Started</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -144,7 +140,6 @@
         </section>
         <!-- end partners -->
 
-
         <!-- Intro -->
         <section class="section-wrap bottom-divider">
           <div class="container">
@@ -152,8 +147,7 @@
               <div class="col-md-8 col-md-offset-2 text-center">
                 <span class="intro__subtitle uppercase">Create. Visualize. Deploy</span>
                 <h2 class="intro__title">
-                  An idea that takes the parts of a structure and turns them into a whole system. Practice is the frequent and continued contemplation
-                  of the mode of executing any given work, or of the mere operation.
+                    Simplicity is key in reducing bugs and coding quickly. The easier it is to code, the more confident and familiar a developer becomes, in turn significantly speeding up development time.
                 </h2>
               </div>
             </div>
@@ -161,107 +155,154 @@
         </section>
         <!-- end intro -->
 
+        <!-- Feature -->
+        <a name="features"></a>
+        <section class="section-wrap bottom-divider">
+            <div class="container">
+
+              <div class="row">
+                  <div class="col-sm-12"><h2>Features</h2></div>
+              </div>
+
+              <div class="row">
+  
+                <div class="col-sm-6">
+                  <div class="feature">
+                    <div class="feature-hdr">
+                      <div href="#" class="feature__icon-holder">
+                          <img src="img/icons/flux.png" width="200"/>
+                      </div>
+                      <h3 class="feature__title">Flux Architecture</h3>
+                    </div>
+                    <div class="feature__text">
+                      <p class="feature__paragraph feature__paragraph--padding-right">
+                        The ArkhamJS framework is small. The bulk of your app should lay within your code, not the framework. While larger frameworks come with lots of "magic", they begin to set limitations when new requirements arise within your project.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end feature item -->
+                </div>
+  
+                <div class="col-sm-6">
+                  <div class="feature">
+                    <div class="feature-hdr">
+                      <div href="#" class="feature__icon-holder">
+                          <img src="img/icons/simplicity.png" width="200"/>
+                      </div>
+                      <h3 class="feature__title">Simplicity</h3>
+                    </div>
+                    <div class="feature__text">
+                      <p class="feature__paragraph feature__paragraph--padding-right">
+                        Whether your project is small or large, ease of use is key. The time it takes to onboard new developers onto a project to learn a new language like Vue or Angular -- or even the complexity of Redux along with its various middleware -- can slow a project down. Time is money.<br/>
+                        ArkhamJS is a non-intrusive framework. If the project is React, devs just need to know React. Plain and simple.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end feature item -->
+                </div>
+  
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+  
+                <div class="col-sm-6 mb-sm-40">
+                  <div class="feature">
+                    <div class="feature-hdr">
+                      <div href="#" class="feature__icon-holder">
+                          <img src="img/icons/single-store.png" width="200"/>
+                      </div>
+                      <h3 class="feature__title">Single Store</h3>
+                    </div>
+                    <div class="feature__text">
+                      <p class="feature__paragraph feature__paragraph--padding-right">
+                        Learn once, use anywhere. ArkhamJS is not tied to a particular library. Use it on the front-end and back-end. ArkhamJS can be used within any library and/or framework, including: Angular, NodeJS, React, and React Native!
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end feature item -->
+                </div>
+  
+                <div class="col-sm-6 mb-sm-40">
+                  <div class="feature">
+                    <div class="feature-hdr">
+                      <div href="#" class="feature__icon-holder">
+                          <img src="img/icons/versatile.png" width="200"/>
+                      </div>
+                      <h3 class="feature__title">Versatile</h3>
+                    </div>
+                    <div class="feature__text">
+                      <p class="feature__paragraph feature__paragraph--padding-right">
+                        Learn once, code anywhere. ArkhamJS is not tied to a particular library. Use it on the front-end and back-end. ArkhamJS can be used within any library and/or framework, including: Angular, NodeJS, React, and React Native!
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end feature item -->
+                </div>
+  
+              </div>
+            </div>
+
+            <div class="container">
+              <div class="row">
+  
+                <div class="col-sm-6 mb-sm-40">
+                  <div class="feature feature-last">
+                    <div class="feature-hdr">
+                      <div href="#" class="feature__icon-holder">
+                          <img src="img/icons/immutability.png" width="200"/>
+                      </div>
+                      <h3 class="feature__title">Immutable</h3>
+                    </div>
+                    <div class="feature__text">
+                      <p class="feature__paragraph feature__paragraph--padding-right">
+                          To prevent object referencing, we use immutable objects. When the state changes, the state's property is not the only item that is changed, the item it references is also updated. To prevent passing around an object between different scopes, immutable objects give your data a one way update path. You may also have returned values converted into ImmutableJS objects.
+                      </p>
+                    </div>
+                  </div>
+                  <!-- end feature item -->
+                </div>
+  
+                <div class="col-sm-6">
+                  <div class="feature feature-last">
+                    <div class="feature-hdr">
+                      <div href="#" class="feature__icon-holder">
+                          <img src="img/icons/typed.png" width="200"/>
+                      </div>
+                      <h3 class="feature__title">Typed</h3>
+                    </div>
+                    <div class="feature__text">
+                      <p class="feature__paragraph feature__paragraph--padding-right">
+                        Although TypeScript is not required, ArkhamJS is strongly typed to plays well with TypeScript. Included are definitions to support your Typescript project.</p>
+                    </div>
+                  </div>
+                  <!-- end feature item -->
+                </div>
+  
+              </div>
+            </div>
+          </section>
+          <!-- end feature -->
+
         <!-- Promo Section -->
-        <section class="section-wrap promo-section bottom-divider pb-100">
+        <section class="section-wrap bottom-divider">
           <div class="container ">
             <div class="row flex-parent flex-vertical-align-center flex-sm-collapse">
               <div class="col-md-6 col-sm-12 col-xs-12">
-                <img src="img/promo/1.jpg" alt="" class="promo-section__img">
-                <a href="https://www.youtube.com/watch?v=nVzVohG304A?autoplay=1" class="play-btn play-btn--center icon-wave single-video-lightbox"></a>
+                <img src="https://arkhamjs.io/img/logger.png" alt="Debug Logger" class="img-responsive"/>
               </div>
               <div class="col-md-5 col-md-offset-1 col-sm-12">
                 <div class="promo-section__description">
-                  <h2 class="promo-section__title">Intuitive interface for collaboration</h2>
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore</p>
+                  <h2 class="promo-section__title">Debugging</h2>
+                  <p>The most important factor in choosing a framework is how easy it is to build. And with building comes debugging. With the state debugger enabled, it will display any actions and state changes that come through the framework. Making the previous and next state visible to the developer. Great way to make your data transparent!</p>
+                  <p>ArkhamJS is a non-intrusive framework. If the project is React, devs just need to know React. Plain and simple.</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <!-- end promo section -->
-
-        <!-- Promo Section -->
-        <section class="section-wrap promo-section bottom-divider pb-100">
-          <div class="container ">
-            <div class="row flex-parent flex-vertical-align-center flex-sm-collapse">
-              <div class="col-md-5 col-sm-12">
-                <div class="promo-section__description">
-                  <h2 class="promo-section__title">Operate the software in real time from any device</h2>
-                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore</p>
-                </div>
-              </div>
-              <div class="col-md-6 col-md-offset-1 col-sm-12">
-                <img src="img/promo/2.jpg" alt="" class="promo-section__img">
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end promo section -->
-
-
-
-        <!-- Feature -->
-        <section class="section-wrap">
-          <div class="container">
-            <div class="row">
-
-              <div class="col-sm-6 mb-sm-40">
-                <div class="feature">
-                  <a href="#" class="feature__icon-holder">
-                    <i class="ui-layers feature__icon feature__icon--gradient"></i>
-                  </a>
-                  <div class="feature__text">
-                    <h3 class="feature__title">Well Documented</h3>
-                    <p class="feature__paragraph feature__paragraph--padding-right">Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome
-                      website with this Theme. Our Theme is a very slick and clean e-commerce template with endless possibilities.
-                      Creating an awesome website with this Theme.</p>
-                  </div>
-                </div>
-                <!-- end feature item -->
-              </div>
-
-              <div class="col-sm-6">
-                <div class="feature">
-                  <a href="#" class="feature__icon-holder">
-                    <i class="ui-pencil-ruler feature__icon feature__icon--gradient"></i>
-                  </a>
-                  <div class="feature__text">
-                    <h3 class="feature__title">Tracking Sales</h3>
-                    <p class="feature__paragraph feature__paragraph--padding-right">Our Theme is a very slick and clean e-commerce template with endless possibilities. Creating an awesome
-                      website with this Theme. Our Theme is a very slick and clean e-commerce template with endless possibilities.
-                      Creating an awesome website with this Theme.</p>
-                  </div>
-                </div>
-                <!-- end feature item -->
-              </div>
-
-            </div>
-          </div>
-        </section>
-        <!-- end feature -->
-
-        <!-- Newsletter -->
-        <section class="section-wrap newsletter bg-img bg-overlay white-text relative" style="background-image: url(img/newsletter/newsletter_bg.jpg);">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6 col-md-offset-3 text-center">
-                <h2 class="newsletter__title">Ready to start a free 14 days trial?</h2>
-                <p class="newsletter__subtitle">Create an account now and generate more leads</p>
-                <form class="newsletter__form relative">
-                  <input type="email" class="newsletter__input" placeholder="Your email">
-                  <input type="submit" class="btn btn--secondary-color btn--button newsletter__submit" value="Subscribe">
-
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end Newsletter -->
-
 
         <!-- Footer -->
         <footer class="footer">
@@ -274,35 +315,23 @@
                     <img src="img/logo_dark.png" alt="" class="logo">
                     <div class="footer__socials mt-40">
                       <div class="social-icons social-icons--nobase">
-                        <a href="#">
-                          <i class="ui-facebook"></i>
-                        </a>
-                        <a href="#">
-                          <i class="ui-linkedin"></i>
-                        </a>
+                        <a href="https://www.facebook.com/nitrogenlabs/"><i class="ui-facebook"></i></a>
+                        <a href="https://www.linkedin.com/company/nitrogenlabs"><i class="ui-linkedin"></i></a>
                       </div>
+                      <span class="copyright">&copy; 2018 <a href="https://nitrogenlabs.com">Nitrogen Labs</a></span>
                     </div>
                   </div>
                 </div>
                 <!-- end about us -->
 
-
                 <div class="col-md-2 col-md-offset-2 col-sm-3 col-xs-12">
                   <div class="widget widget-links">
                     <h5 class="widget-title">Product</h5>
                     <ul class="list-no-dividers">
-                      <li>
-                        <a href="#">About</a>
-                      </li>
-                      <li>
-                        <a href="#">Features</a>
-                      </li>
-                      <li>
-                        <a href="#">Resources</a>
-                      </li>
-                      <li>
-                        <a href="#">Affiliates</a>
-                      </li>
+                      <li><a href="#features">Features</a></li>
+                      <li><a href="/docs">Documentation</a></li>
+                      <li><a href="https://github.com/nitrogenlabs/arkhamjs">Github</a></li>
+                      <li><a href="https://www.npmjs.com/package/arkhamjs">npm</a></li>
                     </ul>
                   </div>
                 </div>
@@ -311,18 +340,8 @@
                   <div class="widget widget-links">
                     <h5 class="widget-title">Support</h5>
                     <ul class="list-no-dividers">
-                      <li>
-                        <a href="#">Help Center</a>
-                      </li>
-                      <li>
-                        <a href="#">Support Policy</a>
-                      </li>
-                      <li>
-                        <a href="#">F.A.Q</a>
-                      </li>
-                      <li>
-                        <a href="#">Privacy &amp; Terms</a>
-                      </li>
+                      <li><a href="https://github.com/nitrogenlabs/arkhamjs/issues">Issues</a></li>
+                      <li><a href="https://gitter.im/NitrogenLabs/arkhamjs">Gitter</a></li>
                     </ul>
                   </div>
                 </div>
@@ -331,18 +350,9 @@
                   <div class="widget widget-links">
                     <h5 class="widget-title">Company</h5>
                     <ul class="list-no-dividers">
-                      <li>
-                        <a href="#">Team</a>
-                      </li>
-                      <li>
-                        <a href="#">Join Us</a>
-                      </li>
-                      <li>
-                        <a href="#">Blog</a>
-                      </li>
-                      <li>
-                        <a href="#">Contact</a>
-                      </li>
+                      <li><a href="https://www.linkedin.com/company/nitrogenlabs">LinkedIn</a></li>
+                      <li><a href="https://www.facebook.com/nitrogenlabs/">Facebook</a></li>
+                      <li><a href="mailto:support@nitrogenlabs.com">Contact</a></li>
                     </ul>
                   </div>
                 </div>
@@ -352,15 +362,6 @@
           </div>
           <!-- end container -->
 
-          <div class="footer__bottom top-divider">
-            <div class="container text-center">
-              <span class="copyright">
-                &copy; 2018
-                <a href="https://nitrogenlabs.com">Nitrogen Labs</a>
-              </span>
-            </div>
-          </div>
-          <!-- end footer bottom -->
         </footer>
         <!-- end footer -->
 
@@ -376,13 +377,12 @@
     </main>
     <!-- end main wrapper -->
 
-
     <!-- jQuery Scripts -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-
+    <script type="text/javascript" src="js/bg.js"></script>
   </body>
-
 </html>
