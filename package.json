@@ -1,13 +1,14 @@
 {
-  "name": "arkhamjs-site",
+  "name": "@nlabs/arkhamjs-site",
   "version": "1.0.0",
-  "description": "ArkhamJS",
-  "license": "MIT",
+  "description": "ArkhamJS Web Site",
   "main": "index.js",
   "types": "./dist/index.d.ts",
   "keywords": [
     "arkhamjs",
     "nitrogenlabs",
+    "react",
+    "react-router",
     "express"
   ],
   "authors": [
@@ -26,53 +27,116 @@
     "docs": "gulp docs",
     "compile": "NODE_ENV=preprod npm test && gulp compile",
     "production": "NODE_ENV=production npm test && gulp production",
-    "start": "npm run development"
+    "start": "npm run development",
+    "test": "NODE_ENV=test gulp test && jest"
   },
   "dependencies": {
+    "@nlabs/arkhamjs-middleware-logger": "^1.0.2",
+    "@nlabs/arkhamjs-storage-browser": "^1.0.5",
+    "@nlabs/arkhamjs-views-react": "^1.1.0",
+    "arkhamjs": "3.1.3",
     "body-parser": "^1.18.2",
     "connect-history-api-fallback": "^1.5.0",
     "express": "^4.16.2",
     "express-useragent": "^1.0.8",
-    "gulp-tslint": "^8.1.2",
-    "ts-node": "^4.1.0",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
   },
   "devDependencies": {
-    "autoprefixer": "^7.2.3",
+    "@types/history": "^4.6.2",
+    "@types/jest": "^22.0.1",
+    "@types/node": "^9.3.0",
+    "@types/prop-types": "^15.5.2",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-router-dom": "^4.2.3",
+    "autoprefixer": "^7.2.5",
     "awesome-typescript-loader": "^3.4.1",
     "del": "^3.0.0",
     "exports-loader": "^0.6.4",
     "fs": "0.0.2",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
-    "gulp-exec": "^2.1.3",
-    "gulp-flatten": "^0.3.1",
+    "gulp-exec": "^3.0.1",
+    "gulp-flatten": "^0.4.0",
     "gulp-image": "^4.2.0",
-    "gulp-plumber": "^1.1.0",
+    "gulp-plumber": "^1.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-svgmin": "^1.2.4",
-    "gulp-svgstore": "^6.1.0",
-    "gulp-unzip": "^0.2.0",
+    "gulp-svgstore": "^6.1.1",
+    "gulp-tslint": "^8.1.2",
+    "gulp-unzip": "^1.0.0",
     "gulp-util": "^3.0.8",
-    "gulp-zip": "^4.0.0",
+    "gulp-zip": "^4.1.0",
     "html-webpack-plugin": "^2.30.1",
     "imports-loader": "^0.7.1",
     "isparta": "^4.0.0",
     "isparta-loader": "^2.0.0",
     "istanbul-instrumenter-loader": "^3.0.0",
-    "nodemon": "^1.14.6",
+    "jest": "^22.0.6",
+    "json-d-ts": "^1.0.1",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.11",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.2.0",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.4",
+    "redbox-react": "^1.5.0",
+    "regenerator-runtime": "^0.11.1",
     "require-dir": "^0.3.2",
-    "run-sequence": "^2.2.0",
+    "run-sequence": "^2.2.1",
     "source-map-loader": "^0.2.3",
     "source-map-support": "^0.5.0",
+    "ts-jest": "^22.0.1",
+    "ts-node": "^4.1.0",
+    "tslint": "^5.9.1",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-react": "^3.4.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.6.2",
     "vinyl-paths": "^2.1.0",
     "webpack": "^3.10.0",
-    "webpack-dev-middleware": "^2.0.3",
+    "webpack-dev-middleware": "^2.0.4",
     "webpack-hot-middleware": "^2.21.0",
-    "yargs": "^10.0.3"
+    "yargs": "^10.1.1"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "html",
+      "text"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testRegex": "src/.*\\.test\\.(ts|tsx|js)$",
+    "testURL": "http://localhost",
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "verbose": false
   }
 }
