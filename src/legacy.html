@@ -9,9 +9,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="Javascript Flux Framework">
 
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700%7CLato:300,400,400i,700' rel='stylesheet'>
-
     <!-- Css -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-icons.css" />
@@ -22,26 +19,11 @@
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112380475-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-112380475-1');
-    </script>
   </head>
 
   <body>
-    <!-- Preloader -->
-    <div class="loader-mask">
-      <div class="loader">
-        "Loading..."
-      </div>
-    </div>
-
+    <Loader/>
+    
     <main class="main-wrapper">
       <!-- Navigation -->
       <header class="nav nav--transparent">
@@ -166,144 +148,66 @@
           </section>
           <!-- end intro -->
 
-          <!-- Features -->
-          <a name="features"></a>
-          <section class="section-wrap bottom-divider">
-              <div class="container-fluid">
-                <div class="row">
-                    <div class="col-sm-12"><h2>Features</h2></div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm-6">
-                    <FeatureItem name="Flux Architecture" icon="flux">
-                      The Flux programming pattern places an emphasis on a unidirectional data flow, consists of three parts: the dispatcher, the stores, and the reactions/views.
-                    </FeatureItem>
-                  </div>
-
-                  <div class="col-sm-6">
-                    <FeatureItem name="Simplicity" icon="simplicity">
-                      Whether a project is large or small, ease of use is the most important factor. The time it takes to onboard new developers with a new language like Vue or Angular -- or even the complexity of Redux along with its various middleware -- can increase a project timeline, and time is money.
-                    </FeatureItem>
-                  </div>
-                </div>
-              </div>
-
-              <div class="container-fluid">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <FeatureItem name="Single Store" icon="single-store">
-                      All the data needed, in one store... the single source of truth. A side step from the that of a traditional flux architecture. Using a single source is extremely reliable, fast, and debug friendly. By using selectors to dig through the app state and obtain context-relevant information, only relevant data is processed on any given dispatch.
-                    </FeatureItem>
-                  </div>
-                  <div class="col-sm-6">
-                    <FeatureItem name="Versatile" icon="versatile">
-                      Learn once, code anywhere. ArkhamJS is not tied to a particular library. Use it on the front-end and back-end. ArkhamJS can be used as a standalone framework or within any existing library, including: Angular, NodeJS, React, and React Native!
-                    </FeatureItem>
-                  </div>
-                </div>
-              </div>
-
-              <div class="container-fluid">
-                <div class="row">
-                  <FeatureItem name="Immutable" icon="immutability">
-                    To prevent object referencing, the use of immutable objects is imparable. When a mutable state changes, the state's property is not the only item that is changed, the item it references can also be updated with it. To prevent passing objects between different states, immutable objects provides your data a one-way update path.
-                  </FeatureItem>
-                  <FeatureItem name="Typed" icon="typed">
-                    Although TypeScript is not required, ArkhamJS is strongly typed to play well with TypeScript. Included are definitions to support your TypeScript project.
-                  </FeatureItem>
-                </div>
-              </div>
-            </section>
-            <!-- end features -->
-
-          <!-- Promo Section -->
-          <section class="section-wrap bottom-divider">
+        <a name="features"></a>
+        <section class="section-wrap bottom-divider">
             <div class="container-fluid">
-              <div class="row flex-parent flex-vertical-align-center flex-sm-collapse">
-                <div class="col-md-6 col-sm-12 col-xs-12 mb-30">
-                  <img src="https://arkhamjs.io/img/logger.png" alt="Debug Logger" class="img-responsive"/>
+              <div class="row">
+                  <div class="col-sm-12"><h2>Features</h2></div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-6">
+                  <FeatureItem name="Flux Architecture" icon="flux">
+                    The Flux programming pattern places an emphasis on a unidirectional data flow, consists of three parts: the dispatcher, the stores, and the reactions/views.
+                  </FeatureItem>
                 </div>
-                <div class="col-md-5 col-md-offset-1 col-sm-12">
-                  <div class="promo-section__description">
-                    <h2 class="promo-section__title">Debugging</h2>
-                    <p>The most important factor in choosing a framework is easy it of use. The second, debugging. With the state debugger enabled, any actions and state changes coming through the framework, are logged in the console. Making both, the previous and next state, visible to the developer. A great way to make your data transparent!</p>
-                    <p>ArkhamJS is a non-intrusive framework. If the project is React, devs just need to know React. Plain and simple.</p>
-                  </div>
+
+                <div class="col-sm-6">
+                  <FeatureItem name="Simplicity" icon="simplicity">
+                    Whether a project is large or small, ease of use is the most important factor. The time it takes to onboard new developers with a new language like Vue or Angular -- or even the complexity of Redux along with its various middleware -- can increase a project timeline, and time is money.
+                  </FeatureItem>
                 </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <FeatureItem name="Single Store" icon="single-store">
+                    All the data needed, in one store... the single source of truth. A side step from the that of a traditional flux architecture. Using a single source is extremely reliable, fast, and debug friendly. By using selectors to dig through the app state and obtain context-relevant information, only relevant data is processed on any given dispatch.
+                  </FeatureItem>
+                </div>
+                <div class="col-sm-6">
+                  <FeatureItem name="Versatile" icon="versatile">
+                    Learn once, code anywhere. ArkhamJS is not tied to a particular library. Use it on the front-end and back-end. ArkhamJS can be used as a standalone framework or within any existing library, including: Angular, NodeJS, React, and React Native!
+                  </FeatureItem>
+                </div>
+              </div>
+            </div>
+
+            <div class="container-fluid">
+              <div class="row">
+                <FeatureItem name="Immutable" icon="immutability">
+                  To prevent object referencing, the use of immutable objects is imparable. When a mutable state changes, the state's property is not the only item that is changed, the item it references can also be updated with it. To prevent passing objects between different states, immutable objects provides your data a one-way update path.
+                </FeatureItem>
+                <FeatureItem name="Typed" icon="typed">
+                  Although TypeScript is not required, ArkhamJS is strongly typed to play well with TypeScript. Included are definitions to support your TypeScript project.
+                </FeatureItem>
               </div>
             </div>
           </section>
-          <!-- end promo section -->
+          
+          <section class="section-wrap bottom-divider">
+            <DetailItem name="Debugging" image="https://arkhamjs.io/img/logger.png">
+              <p>The most important factor in choosing a framework is easy it of use. The second, debugging. With the state debugger enabled, any actions and state changes coming through the framework, are logged in the console. Making both, the previous and next state, visible to the developer. A great way to make your data transparent!</p>
+              <p>ArkhamJS is a non-intrusive framework. If the project is React, devs just need to know React. Plain and simple.</p>
+            </DetailItem>
+          </section>
 
-          <!-- Footer -->
-          <footer class="footer">
-            <div class="container-fluid">
-              <div class="footer__widgets">
-                <div class="row">
-
-                  <div class="col-md-4 col-sm-3 col-xs-12">
-                    <div class="widget footer__about-us">
-                      <img src="img/logo_dark.png" alt="" class="logo">
-                      <div class="footer__socials mt-40">
-                        <div class="social-icons social-icons--nobase">
-                          <a href="https://www.facebook.com/nitrogenlabs/"><i class="ui-facebook"></i></a>
-                          <a href="https://www.linkedin.com/company/nitrogenlabs"><i class="ui-linkedin"></i></a>
-                        </div>
-                        <span class="copyright">&copy; 2018 <a href="https://nitrogenlabs.com">Nitrogen Labs</a></span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end about us -->
-
-                  <div class="col-md-2 col-md-offset-2 col-sm-3 col-xs-12">
-                    <div class="widget widget-links">
-                      <h5 class="widget-title">Product</h5>
-                      <ul class="list-no-dividers">
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="https://docs.arkhamjs.io">Documentation</a></li>
-                        <li><a href="https://github.com/nitrogenlabs/arkhamjs">Github</a></li>
-                        <li><a href="https://www.npmjs.com/package/arkhamjs">npm</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="col-md-2 col-sm-3 col-xs-12">
-                    <div class="widget widget-links">
-                      <h5 class="widget-title">Support</h5>
-                      <ul class="list-no-dividers">
-                        <li><a href="https://github.com/nitrogenlabs/arkhamjs/issues">Issues</a></li>
-                        <li><a href="https://gitter.im/NitrogenLabs/arkhamjs">Gitter</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="col-md-2 col-sm-3 col-xs-12">
-                    <div class="widget widget-links">
-                      <h5 class="widget-title">Company</h5>
-                      <ul class="list-no-dividers">
-                        <li><a href="https://www.linkedin.com/company/nitrogenlabs">LinkedIn</a></li>
-                        <li><a href="https://www.facebook.com/nitrogenlabs/">Facebook</a></li>
-                        <li><a href="mailto:support@nitrogenlabs.com">Contact</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <!-- end container -->
-
-          </footer>
-          <!-- end footer -->
+          <Footer />
         </div>
 
-        <div id="back-to-top">
-          <a href="#top">
-            <i class="ui-arrow-up"></i>
-          </a>
-        </div>
-
+        <TopButton/>
       </div>
       <!-- end content wrapper -->
     </main>
